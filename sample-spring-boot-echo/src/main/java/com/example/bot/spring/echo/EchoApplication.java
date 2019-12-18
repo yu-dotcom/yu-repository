@@ -15,7 +15,7 @@
  */
 
 package com.example.bot.spring.echo;
-//import java.util.Calendar;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -42,13 +42,7 @@ public class EchoApplication {
     public Message handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
         log.info("event: " + event);
         final String originalMessageText = event.getMessage().getText();
-        //String originalMessageText = event.getMessage().getText();
-        //ここから追加した分
-//        Calendar cal = Calendar.getInstance();
-//        originalMessageText += cal.get(Calendar.YEAR);
-        //ここまで追加した分
-        return new TextMessage(originalMessageText + "修正確認12181954");
-        //sample-spring-boot-echo/src/main/java/com/example/bot/spring/echo/EchoApplication.java
+        return new TextMessage(originalMessageText);
     }
 
     @EventMapping
