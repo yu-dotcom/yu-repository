@@ -42,7 +42,8 @@ public class EchoApplication {
     public Message handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
         log.info("event: " + event);
         final String originalMessageText = event.getMessage().getText();
-        return new TextMessage(originalMessageText + "TESTtest");
+        return new TextMessage(originalMessageText + "修正確認12181831");
+        //sample-spring-boot-echo/src/main/java/com/example/bot/spring/echo/EchoApplication.java
     }
 
     @EventMapping
