@@ -41,8 +41,13 @@ public class EchoApplication {
     @EventMapping
     public Message handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
         log.info("event: " + event);
-        final String originalMessageText = event.getMessage().getText();
-        return new TextMessage(originalMessageText + "修正確認12181831");
+        //final String originalMessageText = event.getMessage().getText();
+        String originalMessageText = event.getMessage().getText();
+        //ここから追加した分
+        Calendar cal = Calendar.getInstance();
+        originalMessageText += cal.get(Calendar.YEAR);
+        //ここまで追加した分
+        return new TextMessage(originalMessageText + "修正確認12181932");
         //sample-spring-boot-echo/src/main/java/com/example/bot/spring/echo/EchoApplication.java
     }
 
