@@ -41,8 +41,8 @@ public class EchoApplication {
     @EventMapping
     public Message handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
         log.info("event: " + event);
-        //final String originalMessageText = event.getMessage().getText();
-        String originalMessageText = event.getMessage().getText();
+        final String originalMessageText = event.getMessage().getText();
+        //String originalMessageText = event.getMessage().getText();
         //ここから追加した分
 //        Calendar cal = Calendar.getInstance();
 //        originalMessageText += cal.get(Calendar.YEAR);
