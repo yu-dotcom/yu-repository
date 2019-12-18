@@ -45,7 +45,7 @@ public class EchoApplication {
         //String originalMessageText = event.getMessage().getText();
         //ここから追加した分
 //        Calendar cal = Calendar.getInstance();
-        originalMessageText += cal.get(Calendar.YEAR);
+//        originalMessageText += cal.get(Calendar.YEAR);
         //ここまで追加した分
         return new TextMessage(originalMessageText + "修正確認12181954");
         //sample-spring-boot-echo/src/main/java/com/example/bot/spring/echo/EchoApplication.java
